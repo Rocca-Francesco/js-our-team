@@ -1,4 +1,4 @@
-const ourTeam = [
+const teams = [
     {
         foto: "../img/wayne-barnett-founder-ceo.jpg",
         nome: "Wayne Barnett",
@@ -31,4 +31,12 @@ const ourTeam = [
     }
 ];
 
-console.log(ourTeam);
+// prendo gli oggetti dal mio array
+for (team of teams) {
+    // prendo le caratteristiche degli oggetti
+    for (man in team) {
+        // scrivo in html
+        console.log(man + ": " + team[man]);
+        document.getElementById("ourTeam").innerHTML += man + ": " + team[man];
+    };
+};
