@@ -33,15 +33,21 @@ const teams = [
 
 // prendo gli oggetti dal mio array
 for (team of teams) {
+    // creo un elemento del dom dove scirvere i miei dati
+    const cardEl = document.createElement("div");
+    cardEl.classList.add("col-3", "text-center", "text-secondary", "bg-light", "m-4", "p-0");
     // prendo le caratteristiche degli oggetti
     for (man in team) {
         // SE ho un foto, carico la foto
         if (man == "Foto") {
-            const img = document.getElementById("ourTeam").innerHTML += `<img src="${team[man]}" alt="man-team">`;
-            console.log(img);
-        } else {
+            cardEl.innerHTML += `<img class="img-fluid" src="${team[man]}" alt="man-team">`;
+        } else if (man == "Nome") {
             // scrivo in html
-            document.getElementById("ourTeam").innerHTML += `<br>${man}: ${team[man]}<br>`;
-        }
+            cardEl.innerHTML += `<h2>${team[man]}</h2>`;
+        } else if (man == "Ruolo") {
+            // scrivo in html
+            cardEl.innerHTML += `<span class="d-block pb-2">${team[man]}</span>`;
+        };
+        document.getElementById("ourTeam").append(cardEl);
     };
 };
