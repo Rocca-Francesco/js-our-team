@@ -1,33 +1,33 @@
 const teams = [
     {
-        foto: "../img/wayne-barnett-founder-ceo.jpg",
-        nome: "Wayne Barnett",
-        ruolo: "Founder & CEO"
+        Foto: "../img/wayne-barnett-founder-ceo.jpg",
+        Nome: "Wayne Barnett",
+        Ruolo: "Founder & CEO"
     },
     {
-        foto: "../img/angela-caroll-chief-editor.jpg",
-        nome: "Angela Caroll",
-        ruolo: "Chief Editor"
+        Foto: "../img/angela-caroll-chief-editor.jpg",
+        Nome: "Angela Caroll",
+        Ruolo: "Chief Editor"
     },
     {
-        foto: "../img/walter-gordon-office-manager.jpg",
-        nome: "Walter Gordon",
-        ruolo: "Office Manager"
+        Foto: "../img/walter-gordon-office-manager.jpg",
+        Nome: "Walter Gordon",
+        Ruolo: "Office Manager"
     },
     {
-        foto: "../img/angela-lopez-social-media-manager.jpg",
-        nome: "Angela Lopez",
-        ruolo: "Social Media Manager"
+        Foto: "../img/angela-lopez-social-media-manager.jpg",
+        Nome: "Angela Lopez",
+        Ruolo: "Social Media Manager"
     },
     {
-        foto: "../img/scott-estrada-developer.jpg",
-        nome: "Scott Estrada",
-        ruolo: "Developer"
+        Foto: "../img/scott-estrada-developer.jpg",
+        Nome: "Scott Estrada",
+        Ruolo: "Developer"
     },
     {
-        foto: "../img/barbara-ramos-graphic-designer.jpg",
-        nome: "Barbara Ramos",
-        ruolo: "Graphic Designer"
+        Foto: "../img/barbara-ramos-graphic-designer.jpg",
+        Nome: "Barbara Ramos",
+        Ruolo: "Graphic Designer"
     }
 ];
 
@@ -35,8 +35,13 @@ const teams = [
 for (team of teams) {
     // prendo le caratteristiche degli oggetti
     for (man in team) {
-        // scrivo in html
-        console.log(man + ": " + team[man]);
-        document.getElementById("ourTeam").innerHTML += man + ": " + team[man];
+        // SE ho un foto, carico la foto
+        if (man == "Foto") {
+            const img = document.getElementById("ourTeam").innerHTML += `<img src="${team[man]}" alt="man-team">`;
+            console.log(img);
+        } else {
+            // scrivo in html
+            document.getElementById("ourTeam").innerHTML += `<br>${man}: ${team[man]}<br>`;
+        }
     };
 };
