@@ -1,31 +1,31 @@
 const teams = [
     {
-        Foto: "../img/wayne-barnett-founder-ceo.jpg",
+        Foto: "wayne-barnett-founder-ceo.jpg",
         Nome: "Wayne Barnett",
         Ruolo: "Founder & CEO"
     },
     {
-        Foto: "../img/angela-caroll-chief-editor.jpg",
+        Foto: "angela-caroll-chief-editor.jpg",
         Nome: "Angela Caroll",
         Ruolo: "Chief Editor"
     },
     {
-        Foto: "../img/walter-gordon-office-manager.jpg",
+        Foto: "walter-gordon-office-manager.jpg",
         Nome: "Walter Gordon",
         Ruolo: "Office Manager"
     },
     {
-        Foto: "../img/angela-lopez-social-media-manager.jpg",
+        Foto: "angela-lopez-social-media-manager.jpg",
         Nome: "Angela Lopez",
         Ruolo: "Social Media Manager"
     },
     {
-        Foto: "../img/scott-estrada-developer.jpg",
+        Foto: "scott-estrada-developer.jpg",
         Nome: "Scott Estrada",
         Ruolo: "Developer"
     },
     {
-        Foto: "../img/barbara-ramos-graphic-designer.jpg",
+        Foto: "barbara-ramos-graphic-designer.jpg",
         Nome: "Barbara Ramos",
         Ruolo: "Graphic Designer"
     }
@@ -40,7 +40,7 @@ for (team of teams) {
     for (man in team) {
         // SE ho un foto, carico la foto
         if (man == "Foto") {
-            cardEl.innerHTML += `<img class="img-fluid" src="${team[man]}" alt="man-team">`;
+            cardEl.innerHTML += `<img class="img-fluid" src="./img/${team[man]}" alt="man-team">`;
         } else if (man == "Nome") {
             // scrivo in html
             cardEl.innerHTML += `<h2>${team[man]}</h2>`;
